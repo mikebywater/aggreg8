@@ -1,0 +1,9 @@
+/vendor
+/node_modules
+Homestead.yaml
+.env
+*.iml
+.idea/
+*.ipr
+*.iws
+atlassian-ide-plugin.xml

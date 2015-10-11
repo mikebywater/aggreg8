@@ -1,0 +1,30 @@
+  language: php
+
+
+  php:
+    - 5.5
+    - 5.6
+    - hhvm
+
+  before_install:
+    - composer self-update
+
+  install:
+    - composer install --dev --prefer-source --no-interaction
+    - cp .env.example .env
+    - php artisan key:generate
+
+  notifications:
+    webhooks:
+      urls:
+        - http://requestb.in/sdx5sqsd
+        - https://envoyer.io/deploy/V8XLdU7N6WDhHmv00TGdcMpvEAKFm4PWjkvDtmMT
+
+      on_success: always
+      on_failure: never
+      on_start: never
+
+
+
+
+

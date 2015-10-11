@@ -1,0 +1,70 @@
+{ "object" : "video",
+  "videos" : [
+	{ "id" : "1",
+	  "name"  : "North South Armbar",
+	  "position" : "North South",
+	  "modifier" : "Top",
+	  "type"  : "Submission",
+	  "sub-type" : "Armbar",
+	  "instructor" : "Braulio Estima",
+	  "url"   :  "https://www.youtube.com/watch?v=tGWSeTBSF1o",
+	  "thumb" : "http://img.youtube.com/vi/tGWSeTBSF1o/0.jpg"
+
+	  } ,
+	  { "id" : "2",
+	  "name"  : "Advanced Spinning Armbar",
+	  "position" : "Closed Guard",
+	  "modifier" : "Bottom",
+	  "type"  : "Submission",
+	  "sub-type" : "Armbar",
+	  "instructor" : "Keenan Cornelius",
+	  "url"   :  "https://www.youtube.com/watch?v=u0CFjIqhd50",
+	  "thumb" : "http://img.youtube.com/vi/u0CFjIqhd50/0.jpg"
+
+	  } ,
+      { "id" : "3",
+      "name"  : "Lapel Choke",
+      "position" : "Closed Guard",
+      "modifier" : "Bottom",
+      "type"  : "Submission",
+      "sub-type" : "Choke",
+      "instructor" : "JJ Machado",
+      "url"   :  "https://www.youtube.com/watch?v=RMPo1DYPCnE",
+      "thumb" : "http://img.youtube.com/vi/RMPo1DYPCnE/0.jpg"
+
+      } ,
+      { "id" : "4",
+      "name"  : "Lapel Choke",
+      "position" : "Side Control",
+      "modifier" : "Top",
+      "type"  : "Submission",
+      "sub-type" : "Choke",
+      "instructor" : "Andre Galvao",
+      "url"   :  "https://www.youtube.com/watch?v=c3waITi5Clg",
+      "thumb" : "http://img.youtube.com/vi/c3waITi5Clg/0.jpg"
+
+      } ,
+      { "id" : "5",
+      "name"  : "DLR Hook Sweep",
+      "position" : "De La Riva Guard",
+      "modifier" : "Bottom",
+      "type"  : "Sweep",
+      "sub-type" : "",
+      "instructor" : "Ricardo De La Riva",
+      "url"   :  "https://www.youtube.com/watch?v=507GRtEoPec",
+      "thumb" : "http://img.youtube.com/vi/507GRtEoPec/0.jpg"
+
+      } ,
+      { "id" : "6",
+      "name"  : "Power Knee Slice",
+      "position" : "Half Guard",
+      "modifier" : "Top",
+      "type"  : "Pass",
+      "sub-type" : "",
+      "instructor" : "Xande Ribeiro",
+      "url"   :  "https://www.youtube.com/watch?v=jndA9oiExeo",
+      "thumb" : "http://img.youtube.com/vi/jndA9oiExeo/0.jpg"
+
+      }
+	  ]
+}
