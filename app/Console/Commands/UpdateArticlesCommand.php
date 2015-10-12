@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Events\UpdateArticles;
 use App\Article;
 use Illuminate\Console\Command;
 
@@ -12,7 +13,7 @@ class UpdateArticlesCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'UpdateArticles';
+    protected $signature = 'UpdateArticlesCommand';
 
     /**
      * The console command description.
@@ -39,13 +40,9 @@ class UpdateArticlesCommand extends Command
     public function handle()
     {
 
-        Article::truncate();
-        Article::create([
-            "url"  => "http://tottenhamhotspur.com",
-            "title" => "Spurs Sign Son",
-            "content" => "Spurs sign South Korean striker Son for 22 million euros",
-            "image" => "http://e2.365dm.com/15/09/150x150/heung-min-son-spurs_3352257.jpg"
-            //https://placehold.it/150x150
-        ]);
+        event(new UpdateArticles());
+
+
+
     }
 }

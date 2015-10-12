@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Events\UpdateArticles;
 use App\Article;
 use Illuminate\Http\Request;
 
