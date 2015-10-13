@@ -18,6 +18,8 @@ class CreateArticlesTable extends Migration
             $table->string('image');
             $table->string('content');
             $table->string('title', 60);
+            $table->integer('source_id');
+            $table->string('hash');
             $table->timestamps();
         });
     }

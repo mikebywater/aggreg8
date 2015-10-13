@@ -9,25 +9,19 @@
 @foreach($articles as $article)
   <div class="well">
       <div class="media">
-      	<a class="pull-left" href="{{$article->url}}">
-    		<img class="media-object" src="{{$article->image}}">
-  		</a>
+        @if($article->image)
+            <a class="pull-left" href="{{$article->url}}">
+                <img class="media-object" src="{{$article->image}}">
+            </a>
+        @endif
   		<div class="media-body">
     		<h3 class="media-heading">{{$article->title}}</h3>
-          <p class="text-right">By Francisco</p>
+          <p class="text-right"><a class="btn btn-info" href="{{$article->url}}" target="_blank" role="button">More ...</a></p>
           <p>{{$article->content}}</p>
           <ul class="list-inline list-unstyled">
-  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+  			<li><span><i class="glyphicon glyphicon-calendar"></i> {{$article->age()}} </span></li>
             <li>|</li>
             <span><i class="glyphicon glyphicon-comment"></i> 0 comments</span>
-            <li>|</li>
-            <li>
-               <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-            </li>
             <li>|</li>
             <li>
             <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->

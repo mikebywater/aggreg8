@@ -17,7 +17,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::recent();
         return view('welcome')->with(["articles" => $articles]);
     }
 
