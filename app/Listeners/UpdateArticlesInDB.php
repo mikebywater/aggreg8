@@ -42,7 +42,8 @@ class UpdateArticlesInDB
             $results = $response->json()['results'];
 
 
-            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur", "Bale", "Arsenal"];
+
+            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur"];
 
 
             foreach ($results as $result)
@@ -51,14 +52,20 @@ class UpdateArticlesInDB
                 // First check if spurs are mentioned
                 $found = false;
 
-                foreach($filters as $filter)
+                if ($source->filter)
                 {
-                    $pos = strpos($content, $filter);
-                    if($pos !== false){
-                        $found = true;
+                    foreach($filters as $filter)
+                    {
+                        $pos = strpos($content, $filter);
+                        if($pos !== false){
+                            $found = true;
+                        }
                     }
                 }
-
+                else
+                {
+                    $found = true;
+                }
 
                 // Assuming we got a match check if we already have the story
 

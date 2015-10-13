@@ -2,14 +2,9 @@
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.min.css"/>
 
-<style>
-img {
-    clip: rect(0px,150px,150px,0px);
-}
-</style>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 <div class="container">
-<img src="/img/spurs.png"/><h1>News</h1>
+<img src="/img/spurs.png"/><h1>Latest News</h1>
 @foreach($articles as $article)
   <div class="well">
       <div class="media">
