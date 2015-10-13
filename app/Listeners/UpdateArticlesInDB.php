@@ -42,12 +42,12 @@ class UpdateArticlesInDB
             $results = $response->json()['results'];
 
 
-            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur", "Bale"];
+            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur", "Bale", "Arsenal"];
 
 
             foreach ($results as $result)
             {
-                $content = $result["content"];
+                $content = $result[$source->content_node];
                 // First check if spurs are mentioned
                 $found = false;
 
@@ -70,7 +70,7 @@ class UpdateArticlesInDB
                             "url" => isset($result[$source->url_node]) ? $result[$source->url_node] : '#',
                             "title" => isset($result[$source->title_node]) ? $result[$source->title_node] : '#',
                             "content" => isset($result[$source->content_node]) ? $result[$source->content_node] : '#',
-                            "image" => "",
+                            "image" => isset($result[$source->image_node]) ? $result[$source->image_node] : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/3by2white.svg/150px-3by2white.svg.png',
                             "hash" => $hash
 
                         ]);

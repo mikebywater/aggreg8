@@ -2,7 +2,11 @@
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.min.css"/>
 
-
+<style>
+img {
+    clip: rect(0px,150px,150px,0px);
+}
+</style>
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 <div class="container">
 <img src="/img/spurs.png"/><h1>News</h1>
@@ -11,14 +15,14 @@
       <div class="media">
         @if($article->image)
             <a class="pull-left" href="{{$article->url}}">
-                <img class="media-object" src="{{$article->image}}">
+                <img class="media-object" src="{{$article->image}}"width="150" height="150">
             </a>
         @endif
   		<div class="media-body">
     		<h3 class="media-heading">{{$article->title}}</h3>
-          <p class="text-right"><a class="btn btn-info" href="{{$article->url}}" target="_blank" role="button">More ...</a></p>
+
           <p>{{$article->content}}</p>
-          <ul class="list-inline list-unstyled">
+          <ul class="list-inline list-unstyled ">
   			<li><span><i class="glyphicon glyphicon-calendar"></i> {{$article->age()}} </span></li>
             <li>|</li>
             <span><i class="glyphicon glyphicon-comment"></i> 0 comments</span>
@@ -30,6 +34,8 @@
               <span><i class="fa fa-google-plus-square"></i></span>
             </li>
 			</ul>
+            <p class="text-right"><a class="btn btn-info" href="{{$article->url}}" target="_blank" role="button">More ...</a></p>
+
        </div>
     </div>
   </div>
