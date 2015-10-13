@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call('UserSeeder');
         $this->call('ArticleSeeder');
-
+        $this->call('SourceSeeder');
 
         Model::reguard();
     }

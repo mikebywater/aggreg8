@@ -13,13 +13,15 @@
 
 Route::get('/', 'ArticleController@index');
 
-Route::get('/test', function(){
 
-    event(new App\Events\UpdateArticles());
-    return "hello world!";
-});
 
 Route::group(['prefix' => 'admin'], function(){
 
     Route::resource('articles', 'ArticleController');
+
+    Route::get('refresh', function(){
+
+        event(new App\Events\UpdateArticles());
+        return "... articles updated :)";
+    });
 });
