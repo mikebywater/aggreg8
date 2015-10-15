@@ -19,6 +19,8 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::resource('articles', 'ArticleController');
 
+    Route::resource('sources', 'SourceController');
+
     Route::get('refresh', function(){
 
         event(new App\Events\UpdateArticles());
