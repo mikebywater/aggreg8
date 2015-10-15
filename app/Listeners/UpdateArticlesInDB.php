@@ -43,7 +43,7 @@ class UpdateArticlesInDB
 
 
 
-            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur"];
+            $filters = ["Spurs" , "Kane" , "Tottenham", "Hotspur", "White Hart Lane" , "spurs" , "Dembele" , "Christian Eriksen"];
 
 
             foreach ($results as $result)
@@ -51,9 +51,9 @@ class UpdateArticlesInDB
                 $content = $result[$source->content_node];
                 // First check if spurs are mentioned
                 $found = false;
+
                 if ($source->filter)
                 {
-
                     foreach($filters as $filter)
                     {
                         $pos = strpos($content, $filter);
@@ -78,7 +78,8 @@ class UpdateArticlesInDB
                             "title" => isset($result[$source->title_node]) ? $result[$source->title_node] : '#',
                             "content" => isset($result[$source->content_node]) ? $result[$source->content_node] : '#',
                             "image" => isset($result[$source->image_node]) ? $result[$source->image_node] : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/3by2white.svg/150px-3by2white.svg.png',
-                            "hash" => $hash
+                            "hash" => $hash,
+                            "source_id" => $source->id
 
                         ]);
                     }

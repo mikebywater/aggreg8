@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    protected $fillable = ["title", "url", "content", "image", "hash"];
+    protected $fillable = ["title", "url", "content", "image", "hash", "source_id"];
 
     public function age()
     {
