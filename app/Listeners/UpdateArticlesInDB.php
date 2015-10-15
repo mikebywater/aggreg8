@@ -51,9 +51,9 @@ class UpdateArticlesInDB
                 $content = $result[$source->content_node];
                 // First check if spurs are mentioned
                 $found = false;
-
                 if ($source->filter)
                 {
+
                     foreach($filters as $filter)
                     {
                         $pos = strpos($content, $filter);

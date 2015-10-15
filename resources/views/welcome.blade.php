@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
 <div class="container">
-<img src="/img/spurs.png"/><h1>Latest News</h1>
+<img src="/img/spurs.png"/>
 @foreach($articles as $article)
   <div class="well">
       <div class="media">

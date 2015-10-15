@@ -18,7 +18,7 @@ class SourceSeeder extends Seeder
               "title_node" => "external_link/_text",
               "content_node" => "content",
               "image_node" => "",
-              "filter" => "true"
+              "filter" => "1"
         ]);
 
         Source::create([
@@ -28,7 +28,7 @@ class SourceSeeder extends Seeder
               "title_node" => "title_link/_text",
               "content_node" => "excerpt_value",
               "image_node" => "image",
-              "filter" => "true"
+              "filter" => "1"
         ]);
 
         Source::create([
@@ -38,7 +38,7 @@ class SourceSeeder extends Seeder
               "title_node" => "title",
               "content_node" => "content",
               "image_node" => "image",
-              "filter" => "false"
+              "filter" => "0"
         ]);
 
     }
