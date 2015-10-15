@@ -9,7 +9,7 @@
   <div class="well">
       <div class="media">
         @if($article->image)
-            <a class="pull-left" href="{{$article->url}}">
+            <a class="pull-left hidden-xs" href="{{$article->url}}">
                 <img class="media-object" src="{{$article->image}}"width="150" height="150">
             </a>
         @endif
