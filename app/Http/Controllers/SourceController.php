@@ -27,7 +27,7 @@ class SourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('sources.create');
     }
 
     /**
@@ -38,7 +38,15 @@ class SourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $source = new Source();
+        $source->name = $request->input('name');
+        $source->url = $request->input('url');
+        $source->url_node = $request->input('url_node');
+        $source->content_node = $request->input('content_node');
+        $source->title_node = $request->input('title_node');
+        $source->image_node = $request->input('image_node');
+        $source->filter = $request->input('filter');
+        $source->save();
     }
 
     /**
