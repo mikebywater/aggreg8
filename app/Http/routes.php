@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::get('refresh', function(){
 
+        ini_set('max_execution_time', 300);
         event(new App\Events\UpdateArticles());
         return "... articles updated :)";
     });
