@@ -48,7 +48,7 @@ class UpdateArticlesInDB
 
             foreach ($results as $result)
             {
-                $content = $result[$source->content_node];
+                $content = isset($result[$source->content_node]) ? $result[$source->content_node] : '#';
                 // First check if spurs are mentioned
                 $found = false;
 
