@@ -18,7 +18,7 @@ class Article extends Model
 
     public function scopeRecent($query)
     {
-        return $query->orderBy('created_at' , 'desc')->take(30)->get();
+        return $query->orderBy('created_at' , 'desc')->take(50)->get();
     }
 
 }
