@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Source;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class SourceController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +18,8 @@ class SourceController extends Controller
     public function index()
     {
         $sources = Source::all();
-        return view('admin.sources.index')->with(["sources" => $sources]);
+        $articleCount = Article::count();
+        return view('admin.index')->with(["sources" => $sources , "articleCount" => $articleCount]);
     }
 
     /**
@@ -27,7 +29,7 @@ class SourceController extends Controller
      */
     public function create()
     {
-        return view('admin.sources.create');
+        //
     }
 
     /**
@@ -38,8 +40,7 @@ class SourceController extends Controller
      */
     public function store(Request $request)
     {
-        Source::create($request->all());
-        return redirect('/admin/sources');
+        //
     }
 
     /**

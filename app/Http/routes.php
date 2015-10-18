@@ -15,7 +15,11 @@ Route::get('/', 'ArticleController@index');
 
 
 
-Route::group(['prefix' => 'admin'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+
+
+
+    Route::get('/', 'AdminController@index');
 
     Route::resource('articles', 'ArticleController');
 
@@ -28,3 +32,10 @@ Route::group(['prefix' => 'admin'], function(){
         return "... articles updated :)";
     });
 });
+
+Route::controllers([
+
+   'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController'
+
+]);
