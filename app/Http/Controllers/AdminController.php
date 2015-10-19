@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\PageView;
 use App\Source;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -19,7 +20,9 @@ class AdminController extends Controller
     {
         $sources = Source::all();
         $articleCount = Article::count();
-        return view('admin.index')->with(["sources" => $sources , "articleCount" => $articleCount]);
+        $pageViews = PageView::count();
+        $dailyViews = PageView::count();
+        return view('admin.index')->with(["sources" => $sources , "articleCount" => $articleCount, "pageViews" => $pageViews, "dailyViews" => $dailyViews]);
     }
 
     /**

@@ -14,7 +14,7 @@
                     <div class="panel panel-primary text-center no-boder bg-color-green">
                         <div class="panel-body">
                             <i class="fa fa-bar-chart-o fa-5x"></i>
-                            <h3>?</h3>
+                            <h3>{{$dailyViews}}</h3>
                         </div>
                         <div class="panel-footer back-footer-green">
                             Daily Visits
@@ -50,7 +50,7 @@
                     <div class="panel panel-primary text-center no-boder bg-color-brown">
                         <div class="panel-body">
                             <i class="fa fa-users fa-5x"></i>
-                            <h3>?</h3>
+                            <h3>{{$pageViews}}</h3>
                         </div>
                         <div class="panel-footer back-footer-brown">
                             No. of Visits

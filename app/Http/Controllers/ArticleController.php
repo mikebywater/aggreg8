@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Events\UpdateArticles;
+use App\Events\PageView;
 use App\Article;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -17,6 +18,13 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        if (Auth::check()) {
+            $user_id = Auth::user()->id;
+        }else{
+            $user_id = "";
+        }
+        $route = "index";
+        event(new PageView($route,$user_id));
         $articles = Article::recent();
         return view('welcome')->with(["articles" => $articles]);
     }

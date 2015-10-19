@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\UpdateArticles' => [
             'App\Listeners\UpdateArticlesInDB',
         ],
+        'App\Events\PageView' => [
+            'App\Listeners\RegisterPageView',
+        ],
     ];
 
     /**
