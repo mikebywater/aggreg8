@@ -77,7 +77,7 @@ class UpdateArticlesInDB
                             "url" => isset($result[$source->url_node]) ? $result[$source->url_node] : '#',
                             "title" => isset($result[$source->title_node]) ? $result[$source->title_node] : '#',
                             "content" => isset($result[$source->content_node]) ? $result[$source->content_node] : '#',
-                            "image" => isset($result[$source->image_node]) ? $result[$source->image_node] : 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/3by2white.svg/150px-3by2white.svg.png',
+                            "image" => isset($result[$source->image_node]) ? $result[$source->image_node] : '/img/alt.png',
                             "hash" => $hash,
                             "source_id" => $source->id
 
