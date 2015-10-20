@@ -21,7 +21,7 @@ class AdminController extends Controller
         $sources = Source::all();
         $articleCount = Article::count();
         $pageViews = PageView::count();
-        $dailyViews = PageView::count();
+        $dailyViews = PageView::today()->count();
         return view('admin.index')->with(["sources" => $sources , "articleCount" => $articleCount, "pageViews" => $pageViews, "dailyViews" => $dailyViews]);
     }
 

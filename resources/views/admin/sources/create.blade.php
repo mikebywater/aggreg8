@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 @section('content')
 
 <form action="/admin/sources" method="POST">
