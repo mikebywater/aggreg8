@@ -74,7 +74,7 @@
 
             @yield('content')
 
-    <footer><p>Created by Mike Bywater <a href="mailto:mike.j.bywater@gmail.com">mike.j.bywater@gmail.com</a></p></footer>
+
         </div>
 <!-- /. PAGE INNER  -->
     </div>
