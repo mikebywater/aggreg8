@@ -19,8 +19,8 @@ class ArticleSeeder extends Seeder
               "url"  => "http://tottenhamhotspur.com",
               "title" => "Spurs Sign Son",
               "content" => "Spurs sign South Korean striker Son for 22 million euros",
-               "image" => "http://e2.365dm.com/15/09/150x150/heung-min-son-spurs_3352257.jpg"
-            //https://placehold.it/150x150
+               "image" => "http://e2.365dm.com/15/09/150x150/heung-min-son-spurs_3352257.jpg",
+               "source_id" => "1"
         ]);
 
     }

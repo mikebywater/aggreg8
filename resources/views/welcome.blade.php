@@ -4,14 +4,15 @@
   <div class="well">
       <div class="media">
         @if($article->image)
-            <a class="pull-left hidden-sm hidden-xs" href="{{$article->url}}">
+            <a class="pull-left  hidden-xs" href="{{$article->url}}">
                 <img class="media-object" src="{{$article->image}}"width="150" height="150">
             </a>
         @endif
   		<div class="media-body">
     		<h3 class="media-heading"><strong>{{$article->title}}</strong></h3>
+            <h5 class ="text-info">{{$article->source()->first()->name}}</h5>
 
-          <p class="hidden-xs ">{{$article->content}}</p>
+          <p class="hidden-xs">{{$article->content}}</p>
           <ul class="list-inline list-unstyled ">
   			<li><span><i class="glyphicon glyphicon-calendar"></i> {{$article->age()}} </span></li>
             <li>|</li>

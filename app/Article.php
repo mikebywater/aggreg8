@@ -21,4 +21,9 @@ class Article extends Model
         return $query->orderBy('created_at' , 'desc')->take(50)->get();
     }
 
+    public function source()
+    {
+        return $this->belongsTo('App\Source');
+    }
+
 }

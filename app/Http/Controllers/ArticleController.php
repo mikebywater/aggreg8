@@ -25,7 +25,8 @@ class ArticleController extends Controller
         }
         $route = "index";
         event(new PageView($route,$user_id));
-        $articles = Article::recent();
+        $articles = Article::with('source')->recent();
+  //      dd($articles);
         return view('welcome')->with(["articles" => $articles]);
     }
 
