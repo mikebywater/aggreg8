@@ -23,6 +23,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     Route::resource('articles', 'ArticleController');
 
+    Route::resource('users', 'UserController');
+
     Route::resource('sources', 'SourceController');
 
     Route::get('refresh', function(){
