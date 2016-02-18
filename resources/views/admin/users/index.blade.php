@@ -38,7 +38,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img class="media-object dp img-circle" src="http://cdn3.rd.io/user/no-user-image-square.jpg" style="width: 100px;height:100px;">
+                    <img class="media-object dp img-circle" src="http://www.gravatar.com/avatar/{{md5( strtolower( trim($user->email)))}}?s=100&d=http://cdn3.rd.io/user/no-user-image-square.jpg" style="width: 100px;height:100px;">
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">{{$user->name}}<small>  [000{{$user->id}}]</small></h4>
